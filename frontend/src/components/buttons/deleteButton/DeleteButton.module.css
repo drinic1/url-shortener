@@ -1,0 +1,3 @@
+.btn {
+  composes: btn btnIcon btnOutline btnSmall btnDanger from global;
+}

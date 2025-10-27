@@ -1,0 +1,64 @@
+.logoDark {
+  color: white;
+  font-size: 2em;
+  font-family: bungee;
+  color: #0980a1;
+}
+
+.signupForm {
+}
+
+.container {
+  /* width: ; */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signupFormTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.passwordDiv {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.linkBtn {
+  composes: btn btnTransparent from global;
+  text-decoration-line: underline;
+  color: var(--color-link);
+  font-weight: 400;
+  padding: 6px;
+
+  &:hover {
+    color: var(--color-link);
+    background: transparent;
+  }
+}
+
+.noBorder {
+  composes: input from global;
+  outline: none;
+  border: none;
+  flex-grow: 1;
+
+  &:focus {
+    border: none;
+  }
+}
+
+.input {
+  composes: input from global;
+  margin-bottom: 10px;
+}
+
+.linkMessage {
+  align-self: center;
+}

@@ -1,0 +1,38 @@
+.formContent {
+  height: 200px;
+  width: 350px;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.button {
+  padding: 15px;
+}
+
+.header {
+  color: #343a40;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.message {
+  color: #343a40;
+  /* font-size: 1.2em; */
+  font-weight: 500;
+}
+
+@media (max-width: 450px) {
+  .formContent {
+    max-width: 80vw;
+  }
+}

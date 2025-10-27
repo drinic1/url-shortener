@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 16px;
+}
+
+.formContent {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: auto;
+  border-radius: 10px;
+  padding: 16px;
+
+  & input {
+    margin-bottom: 10px;
+  }
+}
+
+.buttonDiv {
+  display: flex;
+  gap: 16px;
+}
+
+.domainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  & input {
+    flex-grow: 1;
+  }
+
+  & > * {
+    margin-bottom: 10px;
+  }
+}
+
+.domainName {
+  composes: label from global;
+  margin-right: 5px;
+}
+
+.btnOutlinePrimary {
+  composes: btn btnPrimary from global;
+  background-color: transparent;
+  color: #1f8244;
+
+  &:hover {
+    background-color: #1f8244;
+    color: white;
+  }
+}

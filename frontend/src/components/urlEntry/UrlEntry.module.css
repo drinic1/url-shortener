@@ -1,0 +1,70 @@
+.urlEntryStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 16px;
+
+  & > div {
+    word-break: break-all;
+  }
+}
+
+.alias {
+  color: #212529;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.url {
+  color: #809a32;
+  font-size: 0.9em;
+}
+
+.updated {
+  color: #6c757d;
+  font-size: 0.8em;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 5px;
+}
+
+.btnPrimarySmall {
+  composes: btn btnPrimary btnSmall from global;
+}
+
+.btnSecondarySmall {
+  composes: btn btnSecondary btnSmall from global;
+  position: relative;
+
+  & > .tooltip {
+    visibility: collapse;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  &:hover:disabled {
+    & > .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-15%, -120%);
+  display: grid;
+  place-content: center;
+  height: 20px;
+  background-color: #087da8;
+  border-radius: 10px;
+  padding: 5px 15px;
+  white-space: nowrap;
+  font-size: 0.9em;
+}

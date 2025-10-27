@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.title {
+  color: white;
+  font-size: 3em;
+}

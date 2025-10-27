@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  /* font-size: 1em; */
+  /* color: #1f8244; */
+  margin-bottom: 10px;
+  /* background-color: white; */
+}
+
+.domain {
+  composes: input from global;
+  height: 20px;
+  border-right: none;
+  /* flex-grow: 1; */
+  flex-shrink: 1;
+  border-radius: 10px 0 0 10px;
+  background-color: lightgrey;
+  color: grey;
+  min-width: 0;
+}
+
+.formDiv {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  composes: input from global;
+  height: 20px;
+  width: 130px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  /* flex-basis: fit-content; */
+  border-right: none;
+  border-radius: 0;
+
+  &:focus {
+    border-right: none;
+  }
+}
+
+.btnConfirm {
+  composes: btn btnPrimary btnIcon btnOutline btnSmall from global;
+  padding: 8px;
+  border-right: none;
+  border-radius: 0;
+
+  &:hover {
+    border-right: none;
+  }
+}
+
+.btnDismiss {
+  composes: btn btnDanger btnIcon btnOutline btnSmall from global;
+  padding: 8px;
+  border-radius: 0 10px 10px 0;
+}
+
+@media (max-width: 350px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .domain {
+    display: none;
+  }
+
+  .input {
+    border-radius: 10px 0 0 10px;
+  }
+}

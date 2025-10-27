@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+.logo {
+  color: white;
+  font-size: 2em;
+  font-family: bungee;
+  /* margin-right: auto; */
+}
+
+.navbar {
+  display: flex;
+  background: #087da8;
+  border-radius: 4px;
+}
+
+.btn {
+  composes: btn btnTransparent from global;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #10bde5;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+  }
+}
